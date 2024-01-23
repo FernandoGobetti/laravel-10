@@ -29,7 +29,7 @@ class StoreUpdateRequest extends FormRequest
             ]
         ];
 
-        if ($this->method() === 'PUT')
+        if ($this->method() === 'PUT' || $this->method() === 'PATCH')
         {
             // $rules['subject'] = 'required|min:3|max:255|unique:supports,subject,{$this->id},id';
 
@@ -37,7 +37,7 @@ class StoreUpdateRequest extends FormRequest
                 'required',
                 'min:3', 
                 'max:255',
-                Rule::unique('supports')->ignore($this->id)
+                Rule::unique('supports')->ignore($this->support ?? $this->id),
             ];
         }
 

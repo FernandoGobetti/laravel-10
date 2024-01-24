@@ -44,4 +44,14 @@ class StoreUpdateRequest extends FormRequest
 
         return $rules;
     }
+
+    public function messages()
+    {
+        return [
+            'subject.required' => 'O campo SUBJECT é obrigatório',
+            'subject.min' => 'O campo SUBJECT precisa pelo menos :min caracteres',
+            'body.required' => 'O campo BODY é obrigatório',
+            'body.min' => 'O campo BODY precisa pelo menos :min caracteres',
+        ];
+    }
 }

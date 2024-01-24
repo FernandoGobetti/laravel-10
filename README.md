@@ -1,16 +1,31 @@
-
 # Setup Docker Laravel 10 com PHP 8.1
-[Assine a Academy, e Seja VIP!](https://academy.especializati.com.br)
+
+## Tecnologias utilizadas:
+
+- Laravel 10
+- Laravel Breeze
+- TailwindCSS
+- Docker
+- Mysql
+
+## Designs Patterns Utilizados
+
+- MVC
+- Service Layer
+- Repository Pattern
+- DTO
+- Presenter
+- Adapter
+- Componentização (Blade)
 
 ### Passo a passo
 Clone Repositório
 ```sh
-git clone -b laravel-10-com-php-8.1 https://github.com/especializati/setup-docker-laravel.git app-laravel
+git clone -b main https://github.com/FernandoGobetti/laravel-10.git app-laravel
 ```
 ```sh
 cd app-laravel
 ```
-
 
 Crie o Arquivo .env
 ```sh
@@ -20,15 +35,15 @@ cp .env.example .env
 
 Atualize as variáveis de ambiente do arquivo .env
 ```dosini
-APP_NAME=EspecializaTi
+APP_NAME=Laravel
 APP_URL=http://localhost:8989
 
 DB_CONNECTION=mysql
 DB_HOST=db
 DB_PORT=3306
-DB_DATABASE=nome_que_desejar_db
-DB_USERNAME=nome_usuario
-DB_PASSWORD=senha_aqui
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=root
 
 CACHE_DRIVER=redis
 QUEUE_CONNECTION=redis
